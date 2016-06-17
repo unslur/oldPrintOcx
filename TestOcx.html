@@ -1,0 +1,94 @@
+<html>
+  <head>
+<script language="javascript">
+window.onload=Init; 
+
+function f_click()
+{
+
+//document.getElementById("tm").innerText = Math.random();
+setTimeout("Init()",1000);
+}
+
+
+
+function Init()
+{
+	//var s =IP.value;
+	//var str=new string(IP.value); 
+	//var s ="10.0.0.161";
+	KmdVideo11.MyTest("mutest");
+	//alert("初始化成功!");
+
+}
+function Select()
+{
+	
+	var s = deviceNo.value;//"010000000000000001003C01"
+	//var s =  "010000000000000001003601";
+	if(KmdVideo11.KT_FindRecordFile(s,"2010-07-15 08:00:00","2010-07-27 21:00:00",0,2) ==1)
+{
+	alert("正在接入中心，请稍候!");
+
+}
+	
+	
+}
+function SelectTree()
+{
+	
+	filelist.value ="";
+	while(true)
+	{
+
+
+		var s =KmdVideo11.KT_FindNextFile();
+		if(s!="" && s!="-")
+		{
+			filelist.value=filelist.value +s+"\n";
+			
+		}
+		else
+		{
+			filelist.value=filelist.value +s+"\n";
+			break;
+		}
+	}
+}
+function Play()
+{
+	
+	var s = filename.value;
+	KmdVideo11.KT_PlayRecordFile(0,s,0);
+	
+	
+}
+function Stop()
+{
+	
+	KmdVideo11.KT_Stop();
+}
+
+function Unit()
+{
+	
+	KmdVideo11.KT_UnInitializeOcx();
+	
+}
+</script>
+  </head>
+  
+<body>
+	  <input type="button" name="Play" value = "MyTest" onclick=Init()>&nbsp&nbsp
+<object classid="clsid:0880401B-3338-475F-BB19-8897E2B40A10" name="KmdVideo11" id="KmdVideo11" width=527 height=451>
+							<param name="_Version" value="65536">						
+ 
+
+
+
+<br/>
+  
+  <br/>
+  	
+</head>
+</html>

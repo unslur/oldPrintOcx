@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>打印测试</title>
+
+    <script language="javascript">
+			/*function Print(){
+				var k = neowerPrinter.print("10 123456789013 药材名称:三七17 溯源码:123456789019 生产日期:2010.10.1247 生产企业:成都锦通药业连锁有限公司（钟氏虫草行）10 123456789113 药材名称:四七17 溯源码:123456789119 生产日期:2010.10.1348 生产企业:成都锦通药业连锁有限公司（钟氏虫草行1）","POSTEK G-2108D");
+				alert(k);
+			}
+			//*/
+			function Print(){
+				var k = neowerPrinter.print("123456789013\n药材名称:三七\n溯源码:123456789019\n生产日期:2010.10.1247\n生产企业:成都锦通药业连锁有限公司（钟氏虫草行）\n\n","POSTEK G-2108D");
+				alert(k);
+			}
+function PrintNew(){
+     var k = neowerPrinter.printNew("http://cdcspt.zyczs.gov.cn/zycqt/receive/search?code=51012730061805200001915090100000047\n溯源码:82345678908234567890123456789011\n品 名:三七\n重    量:20g\n产 地:云南文山市\n生产日期:2012.09.18\n批 号:887966530187G\n厂 家:云南天虹中药材有限公司\n|*CPC*ZYCZS12345678901234567890123456789022\n溯源码:82345678908234567890123456789022\n品 名:三七\n重    量:20g\n产 地:云南文山市\n生产日期:2012.09.18\n批 号:887966530187G\n厂 家:云南天虹中药材有限公司\n\n","",3);
+			}
+function PrintNewz(){
+var k = neowerPrinter.printNew3("123456789013\n溯源码:123456789019\n品名:三七 重量:15g\n|123456789013\n溯源码:123456789019\n品名:天麻 重量: 20g\n\n","",1);}
+function PrintNewy(){
+var k = neowerPrinter.printNew("*CPC*ZYCZS12345678901234567890123456789011\n溯源码:82345678908234567890123456789022\n品 名:三七\n重  量:20g\n产 地:云南文山市\n生产日期:2012.09.18\n批 号:887966530187G\n厂 家:云南天虹中药材有限公司\n|*CPC*ZYCZS12345678901234567890123456789011\n溯源码:82345678908234567890123456789022\n品 名:三七\n重  量:20g\n产 地:云南文山市\n生产日期:2012.09.18\n批 号:887966530187G\n厂 家:云南天虹中药材有限公司\n\n","",2);}
+function PrintNewl(){
+var k = neowerPrinter.printNew3("http://cdcspt.zyczs.gov.cn/zycqt/receive/search?code=51012730061805200001915090100000047\n82345678908234567890123456789022111\n薏苡 20g\n云南文山市\n2012.09.18\n批号:887966530187G\n薏苡仁虹中药材有限公司\n|*CPC*ZYCZS12345678901234567890123456789011111\n82345678908234567890123456789022111\n薏苡 20g\n云南文山市\n2012.09.18\n批号:887966530187G\n薏苡仁虹中药材有限公司\n|*CPC*ZYCZS12345678901234567890123456789011111\n82345678908234567890123456789022111\n薏苡 20g\n云南文山市\n2012.09.18\n批号:887966530187G\n云南天虹中药材有限公司\n\n","",4);}
+
+
+			function MyTest(){
+				neowerPrinter.MyTest("dddd");
+			}
+			
+			function ReadRFID(){
+				code = neowerPrinter.ReadRFID("COM3",10);
+				alert(code);
+			}
+			
+		  function ReadRFID2(){
+				code = neowerPrinter.ReadRFID2(10); //参数为等待秒数
+				alert(code);
+			}
+			
+			function WriteRFID(){
+				code = neowerPrinter.WriteRFID("181","COM3",10);
+				alert(code);
+			}
+			
+			function WriteRFID2(){ 
+				code = neowerPrinter.WriteRFID2("00001000|10127300010214|九州药业|13438882929|00000000000000000000000000013003|成都市荷花池中药材专业市场|2|",1);//写入参数   1为初始化卡 2为重置卡  正确返回 OK  失败返回错误信息
+				alert(code);
+			}
+			
+			function Print2(){
+				var k = neowerPrinter.print2("上面是在MSDN中的TextOut的\n定义,第一个参数是文字输出的开始点的横坐标,第二参数是纵坐标,第三个参数是输\n出文字的内容,第四个参数是要输出几个字");
+				alert(k);
+				}
+				
+			function ReadQR(){
+				code = neowerPrinter.ReadQR("COM7",9600,10);
+				alert(code);
+			}
+			
+			function DownloadData(){
+				code = neowerPrinter.DownloadData("10127300003582 4 2205 192.168.0.215 5555");
+				//code = neowerPrinter.DownloadData("10127300003582 4 2172 127.0.0.1 5555");
+				alert(code);
+			}
+			function GetNumber(){
+				code = neowerPrinter.GetNumber("10127300003582 2205 3");				
+				alert(code);
+			}
+			function ULogin(){
+				code = neowerPrinter.ULogin();								        alert(code);
+			}			
+    </script>
+
+<META name=GENERATOR content="MSHTML 8.00.6001.19120">
+
+</head>
+<body>
+    <input type="button" name="print" value="打印左右" onclick="PrintNew()">&nbsp;&nbsp;
+    <input type="button" name="print" value="打印左" onclick="PrintNewz()">&nbsp;&nbsp;
+    <input type="button" name="print" value="打印右" onclick="PrintNewy()">&nbsp;&nbsp;
+    <input type="button" name="print" value="打印三列" onclick="PrintNewl()">&nbsp;&nbsp;
+    <input type="button" name="print" value="测试" onclick="MyTest()">&nbsp;&nbsp;
+    <input type="button" name="print" value="读卡" onclick="ReadRFID()">&nbsp;&nbsp;
+    <input type="button" name="print" value="读卡2" onclick="ReadRFID2()">&nbsp;&nbsp;
+    <input type="button" name="print" value="写卡" onclick="WriteRFID()">&nbsp;&nbsp;
+    <input type="button" name="print" value="写卡2" onclick="WriteRFID2()">&nbsp;&nbsp;
+    <input type="button" name="print" value="小票打印" onclick="Print2()">&nbsp;&nbsp;
+    <input type="button" name="print" value=" 读 码 " onclick="readQR()">&nbsp;&nbsp;
+    <input type="button" name="print" value="下载码数据" onclick="DownloadData()">
+    <input type="button" name="print" value="得到本地数据" onclick="GetNumber()">
+    <input type="button" name="print" value="U登陆" onclick="ULogin()">
+    <object classid="clsid:0880401B-3338-475F-BB19-8897E2B40A10" name="neowerPrinter"
+        id="neowerPrinter" width="0" height="0">
+    </object>
+    <br />
+</body>
+</html>

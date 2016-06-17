@@ -1,0 +1,72 @@
+// MyTestOcx.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (MyTestOcx.tlb) that will become a resource in
+// MyTestOcx.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(C83D8C79-1C2A-4ABF-B447-7A47DA6E108F), version(1.0),
+  helpfile("MyTestOcx.hlp"),
+  helpstring("MyTestOcx ActiveX Control module"),
+  control ]
+library MyTestOcxLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CMyTestOcxCtrl
+
+	[ uuid(9A500F3E-E282-4A61-871B-C4245786EAC8),
+	  helpstring("Dispatch interface for MyTestOcx Control")]
+	dispinterface _DMyTestOcx
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1), helpstring("method MyTest")] LONG MyTest(BSTR bstrTest);
+			[id(2), helpstring("method print")] LONG print(BSTR pp, BSTR printerName);
+			[id(3), helpstring("method ReadRFID")] BSTR ReadRFID(BSTR com, LONG overTime);
+			[id(4), helpstring("method WriteRFID")] LONG WriteRFID(BSTR codeStr, BSTR com, LONG overTime);
+			[id(5), helpstring("method print2")] LONG print2(BSTR pp);
+			[id(6), helpstring("method ReadQR")] BSTR ReadQR(BSTR com, LONG baudRate, LONG overTime);
+			[id(7), helpstring("method printNew")] LONG printNew (BSTR pp, BSTR printerName);
+			[id(8), helpstring("method ReadQRNew")] BSTR ReadQRNew();
+			[id(9), helpstring("method printNew3")] BSTR printNew3();
+			[id(10), helpstring("method DownloadData")] BSTR DownloadData(BSTR inVar);
+			[id(11), helpstring("method GetNumber")] BSTR GetNumber(BSTR inVar);
+			[id(12), helpstring("method ReadRFID2")] BSTR ReadRFID2(LONG overTime);
+			[id(13), helpstring("method WriteRFID2")] BSTR WriteRFID2(BSTR codeStr, LONG mode);
+			[id(14), helpstring("method ULogin")] BSTR ULogin(void);
+			//[id(15), helpstring("method printNewWine3")] LONG printNewWine3(BSTR pp, LONG codeNum, LONG nPrintType);
+			//[id(16), helpstring("method printNewWine")] LONG printNewWine(BSTR pp, BSTR code, LONG codeNum, LONG printTypeNum);
+			//[id(15), helpstring("method printWine3")] BSTR printWine3(BSTR httpParam, BSTR code, BSTR pp, LONG codeNum);
+			[id(15), helpstring("method printWine3")] LONG printWine3(BSTR http, BSTR code, BSTR pp, LONG nPrintType);
+			[id(16), helpstring("method printNew_1")] LONG printNew_1 (BSTR pp, BSTR printerName);
+			[id(17), helpstring("method printtag2")] LONG printtag2 (BSTR pp, BSTR printerName);
+	};
+
+	//  Event dispatch interface for CMyTestOcxCtrl
+
+	[ uuid(0EB82703-A740-40DA-9C40-4EC60773A613),
+	  helpstring("Event interface for MyTestOcx Control") ]
+	dispinterface _DMyTestOcxEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CMyTestOcxCtrl
+
+	[ uuid(0880401B-3338-475F-BB19-8897E2B40A10),
+	  helpstring("MyTestOcx Control"), control ]
+	coclass MyTestOcx
+	{
+		[default] dispinterface _DMyTestOcx;
+		[default, source] dispinterface _DMyTestOcxEvents;
+	};
+
+};

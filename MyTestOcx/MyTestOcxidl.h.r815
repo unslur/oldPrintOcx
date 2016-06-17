@@ -1,0 +1,316 @@
+
+
+/* this ALWAYS GENERATED file contains the definitions for the interfaces */
+
+
+ /* File created by MIDL compiler version 6.00.0361 */
+/* at Thu Dec 10 15:03:46 2015
+ */
+/* Compiler settings for .\MyTestOcx.idl:
+    Oicf, W1, Zp8, env=Win32 (32b run)
+    protocol : dce , ms_ext, c_ext, robust
+    error checks: allocation ref bounds_check enum stub_data 
+    VC __declspec() decoration level: 
+         __declspec(uuid()), __declspec(selectany), __declspec(novtable)
+         DECLSPEC_UUID(), MIDL_INTERFACE()
+*/
+//@@MIDL_FILE_HEADING(  )
+
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
+
+
+/* verify that the <rpcndr.h> version is high enough to compile this file*/
+#ifndef __REQUIRED_RPCNDR_H_VERSION__
+#define __REQUIRED_RPCNDR_H_VERSION__ 475
+#endif
+
+#include "rpc.h"
+#include "rpcndr.h"
+
+#ifndef __RPCNDR_H_VERSION__
+#error this stub requires an updated version of <rpcndr.h>
+#endif // __RPCNDR_H_VERSION__
+
+
+#ifndef __MyTestOcxidl_h__
+#define __MyTestOcxidl_h__
+
+#if defined(_MSC_VER) && (_MSC_VER >= 1020)
+#pragma once
+#endif
+
+/* Forward Declarations */ 
+
+#ifndef ___DMyTestOcx_FWD_DEFINED__
+#define ___DMyTestOcx_FWD_DEFINED__
+typedef interface _DMyTestOcx _DMyTestOcx;
+#endif 	/* ___DMyTestOcx_FWD_DEFINED__ */
+
+
+#ifndef ___DMyTestOcxEvents_FWD_DEFINED__
+#define ___DMyTestOcxEvents_FWD_DEFINED__
+typedef interface _DMyTestOcxEvents _DMyTestOcxEvents;
+#endif 	/* ___DMyTestOcxEvents_FWD_DEFINED__ */
+
+
+#ifndef __MyTestOcx_FWD_DEFINED__
+#define __MyTestOcx_FWD_DEFINED__
+
+#ifdef __cplusplus
+typedef class MyTestOcx MyTestOcx;
+#else
+typedef struct MyTestOcx MyTestOcx;
+#endif /* __cplusplus */
+
+#endif 	/* __MyTestOcx_FWD_DEFINED__ */
+
+
+#ifdef __cplusplus
+extern "C"{
+#endif 
+
+void * __RPC_USER MIDL_user_allocate(size_t);
+void __RPC_USER MIDL_user_free( void * ); 
+
+
+#ifndef __MyTestOcxLib_LIBRARY_DEFINED__
+#define __MyTestOcxLib_LIBRARY_DEFINED__
+
+/* library MyTestOcxLib */
+/* [control][helpstring][helpfile][version][uuid] */ 
+
+
+EXTERN_C const IID LIBID_MyTestOcxLib;
+
+#ifndef ___DMyTestOcx_DISPINTERFACE_DEFINED__
+#define ___DMyTestOcx_DISPINTERFACE_DEFINED__
+
+/* dispinterface _DMyTestOcx */
+/* [helpstring][uuid] */ 
+
+
+EXTERN_C const IID DIID__DMyTestOcx;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+
+    MIDL_INTERFACE("9A500F3E-E282-4A61-871B-C4245786EAC8")
+    _DMyTestOcx : public IDispatch
+    {
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct _DMyTestOcxVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            _DMyTestOcx * This,
+            /* [in] */ REFIID riid,
+            /* [iid_is][out] */ void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            _DMyTestOcx * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            _DMyTestOcx * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            _DMyTestOcx * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            _DMyTestOcx * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            _DMyTestOcx * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            _DMyTestOcx * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        END_INTERFACE
+    } _DMyTestOcxVtbl;
+
+    interface _DMyTestOcx
+    {
+        CONST_VTBL struct _DMyTestOcxVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define _DMyTestOcx_QueryInterface(This,riid,ppvObject)	\
+    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+
+#define _DMyTestOcx_AddRef(This)	\
+    (This)->lpVtbl -> AddRef(This)
+
+#define _DMyTestOcx_Release(This)	\
+    (This)->lpVtbl -> Release(This)
+
+
+#define _DMyTestOcx_GetTypeInfoCount(This,pctinfo)	\
+    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+
+#define _DMyTestOcx_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+
+#define _DMyTestOcx_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+
+#define _DMyTestOcx_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+#endif 	/* ___DMyTestOcx_DISPINTERFACE_DEFINED__ */
+
+
+#ifndef ___DMyTestOcxEvents_DISPINTERFACE_DEFINED__
+#define ___DMyTestOcxEvents_DISPINTERFACE_DEFINED__
+
+/* dispinterface _DMyTestOcxEvents */
+/* [helpstring][uuid] */ 
+
+
+EXTERN_C const IID DIID__DMyTestOcxEvents;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+
+    MIDL_INTERFACE("0EB82703-A740-40DA-9C40-4EC60773A613")
+    _DMyTestOcxEvents : public IDispatch
+    {
+    };
+    
+#else 	/* C style interface */
+
+    typedef struct _DMyTestOcxEventsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            _DMyTestOcxEvents * This,
+            /* [in] */ REFIID riid,
+            /* [iid_is][out] */ void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            _DMyTestOcxEvents * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            _DMyTestOcxEvents * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
+            _DMyTestOcxEvents * This,
+            /* [out] */ UINT *pctinfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
+            _DMyTestOcxEvents * This,
+            /* [in] */ UINT iTInfo,
+            /* [in] */ LCID lcid,
+            /* [out] */ ITypeInfo **ppTInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
+            _DMyTestOcxEvents * This,
+            /* [in] */ REFIID riid,
+            /* [size_is][in] */ LPOLESTR *rgszNames,
+            /* [in] */ UINT cNames,
+            /* [in] */ LCID lcid,
+            /* [size_is][out] */ DISPID *rgDispId);
+        
+        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
+            _DMyTestOcxEvents * This,
+            /* [in] */ DISPID dispIdMember,
+            /* [in] */ REFIID riid,
+            /* [in] */ LCID lcid,
+            /* [in] */ WORD wFlags,
+            /* [out][in] */ DISPPARAMS *pDispParams,
+            /* [out] */ VARIANT *pVarResult,
+            /* [out] */ EXCEPINFO *pExcepInfo,
+            /* [out] */ UINT *puArgErr);
+        
+        END_INTERFACE
+    } _DMyTestOcxEventsVtbl;
+
+    interface _DMyTestOcxEvents
+    {
+        CONST_VTBL struct _DMyTestOcxEventsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define _DMyTestOcxEvents_QueryInterface(This,riid,ppvObject)	\
+    (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)
+
+#define _DMyTestOcxEvents_AddRef(This)	\
+    (This)->lpVtbl -> AddRef(This)
+
+#define _DMyTestOcxEvents_Release(This)	\
+    (This)->lpVtbl -> Release(This)
+
+
+#define _DMyTestOcxEvents_GetTypeInfoCount(This,pctinfo)	\
+    (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo)
+
+#define _DMyTestOcxEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+    (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo)
+
+#define _DMyTestOcxEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+    (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)
+
+#define _DMyTestOcxEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+    (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+#endif 	/* ___DMyTestOcxEvents_DISPINTERFACE_DEFINED__ */
+
+
+EXTERN_C const CLSID CLSID_MyTestOcx;
+
+#ifdef __cplusplus
+
+class DECLSPEC_UUID("0880401B-3338-475F-BB19-8897E2B40A10")
+MyTestOcx;
+#endif
+#endif /* __MyTestOcxLib_LIBRARY_DEFINED__ */
+
+/* Additional Prototypes for ALL interfaces */
+
+/* end of Additional Prototypes */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+
